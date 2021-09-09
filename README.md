@@ -18,15 +18,15 @@
 ## Exmaple
 
 
-<table width="1200" rules="cols" borderstyle="dashed" style="border:2px solid skyblue">
+<table width="100" rules="cols" borderstyle="dashed" style="border:2px solid skyblue">
         <tr>
           <td>Original<img alt="" src="https://user-images.githubusercontent.com/71121461/132659892-60392b50-fe45-43b7-bca6-70561d3b04d9.gif" /></td><td>AANet<img alt="" src="https://images.velog.io/images/sjinu/post/8d2aee3e-1787-4f88-8c15-12be3ec75591/aanet_result_with_clipping_0.4_very_low_right_right.gif" /></td>
         <tr>
 </table>
 
-<table width="1200" rules="cols" borderstyle="dashed" style="border:2px solid skyblue">
+<table width="100" rules="cols" borderstyle="dashed" style="border:2px solid skyblue">
         <tr>
-          <td width=800>Original<img alt="" src="https://user-images.githubusercontent.com/71121461/132659821-34657c0c-6a68-4dc0-a05f-284cec4c81db.gif" /></td><td >AANet<img alt="" src="https://images.velog.io/images/sjinu/post/8c6d11e3-334f-4ea5-beb0-851d6e91e647/Mike!.gif" /></td>
+          <td width=50>Original<img alt="" src="https://user-images.githubusercontent.com/71121461/132659821-34657c0c-6a68-4dc0-a05f-284cec4c81db.gif" /></td><td >AANet<img alt="" src="https://images.velog.io/images/sjinu/post/8c6d11e3-334f-4ea5-beb0-851d6e91e647/Mike!.gif" /></td>
        <tr>
 </table>
 
