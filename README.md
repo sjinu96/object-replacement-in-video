@@ -1,3 +1,6 @@
+
+## Editing...(
+
 ### Final project : [erAIser](https://github.com/shkim960520/erAIser) - Remove an object in video using AI
 
 [![file](https://img.shields.io/badge/presentation-file-orange)](https://drive.google.com/file/d/176qC2l3OYg_Uodj144VQRZ2MIT7Kobhu/view?usp=sharing)
@@ -14,15 +17,16 @@
 
 ## Exmaple
 
-<table width="800" rules="cols" borderstyle="dashed" style="border:2px solid skyblue">
+
+<table width="1200" rules="cols" borderstyle="dashed" style="border:2px solid skyblue">
         <tr>
-          <td>Original<img alt="" src="https://images.velog.io/images/sjinu/post/8025798a-5651-4447-a4dd-9d3ffbfcf4d1/origin_video.gif" /></td><td>AANet<img alt="" src="https://images.velog.io/images/sjinu/post/8d2aee3e-1787-4f88-8c15-12be3ec75591/aanet_result_with_clipping_0.4_very_low_right_right.gif" /></td>
+          <td>Original<img alt="" src="https://user-images.githubusercontent.com/71121461/132659892-60392b50-fe45-43b7-bca6-70561d3b04d9.gif" /></td><td>AANet<img alt="" src="https://images.velog.io/images/sjinu/post/8d2aee3e-1787-4f88-8c15-12be3ec75591/aanet_result_with_clipping_0.4_very_low_right_right.gif" /></td>
         <tr>
 </table>
 
-<table width="800" rules="cols" borderstyle="dashed" style="border:2px solid skyblue">
+<table width="1200" rules="cols" borderstyle="dashed" style="border:2px solid skyblue">
         <tr>
-          <td width=370>Original<img alt="" src="https://images.velog.io/images/sjinu/post/d5808933-409c-46cf-a683-e8b4b6ce8ca9/original.gif" /></td><td >AANet<img alt="" src="https://images.velog.io/images/sjinu/post/8c6d11e3-334f-4ea5-beb0-851d6e91e647/Mike!.gif" /></td>
+          <td width=800>Original<img alt="" src="https://user-images.githubusercontent.com/71121461/132659821-34657c0c-6a68-4dc0-a05f-284cec4c81db.gif" /></td><td >AANet<img alt="" src="https://images.velog.io/images/sjinu/post/8c6d11e3-334f-4ea5-beb0-851d6e91e647/Mike!.gif" /></td>
        <tr>
 </table>
 
