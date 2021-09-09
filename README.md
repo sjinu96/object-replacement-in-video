@@ -24,7 +24,7 @@
         <tr>
 </table>
 
-<table width="600" rules="cols" borderstyle="dashed" style="border:2px solid skyblue">
+<table width="630" rules="cols" borderstyle="dashed" style="border:2px solid skyblue">
         <tr>
           <td width=600>Original<img alt="" src="https://user-images.githubusercontent.com/71121461/132659821-34657c0c-6a68-4dc0-a05f-284cec4c81db.gif" /></td><td >AANet<img alt="" src="https://images.velog.io/images/sjinu/post/8c6d11e3-334f-4ea5-beb0-851d6e91e647/Mike!.gif" /></td>
        <tr>
