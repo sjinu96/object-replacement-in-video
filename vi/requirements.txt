@@ -1,0 +1,8 @@
+torch==1.8.1
+torchvision
+numpy
+tqdm
+pandas
+matplotlib
+opencv_python
+scipy

@@ -1,0 +1,7 @@
+__pycache__
+dist
+build
+*_cuda.egg-info
+*.pth
+*.mp4
+*.tar
