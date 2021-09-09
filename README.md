@@ -1,8 +1,41 @@
-# erAIser - Remove an object in video using AI
+### Final project : [erAIser](https://github.com/shkim960520/erAIser) - Remove an object in video using AI
+
 [![file](https://img.shields.io/badge/presentation-file-orange)](https://drive.google.com/file/d/176qC2l3OYg_Uodj144VQRZ2MIT7Kobhu/view?usp=sharing)
 [![video](https://img.shields.io/badge/presentation-video-orange)](https://www.youtube.com/watch?v=ebZxKIbMvqo)
-<p align="center"><img width="980" alt="첫슬라이드" src="https://user-images.githubusercontent.com/40483474/125912276-4d5b8952-7973-4884-80ff-93f475fb3bb8.PNG">
-</p>
+
+
+# Moving Object Replacement in Video
+
+본 저장소는 [github.com/snapresearch](https://github.com/snap-research/articulated-animation)을 기반으로 합니다.
+해당 모델을 새로운 task(물체가 지워진 동영상 내에 새로운 애니메이션을 생성하는)을 적용하기 위해 추가한 모듈과 함수는 아래와 같습니다. 
+
+[]()  
+[]() 
+
+## Exmaple
+
+<table width="800" rules="cols" borderstyle="dashed" style="border:2px solid skyblue">
+        <tr>
+          <td>Original<img alt="" src="https://images.velog.io/images/sjinu/post/8025798a-5651-4447-a4dd-9d3ffbfcf4d1/origin_video.gif" /></td><td>AANet<img alt="" src="https://images.velog.io/images/sjinu/post/8d2aee3e-1787-4f88-8c15-12be3ec75591/aanet_result_with_clipping_0.4_very_low_right_right.gif" /></td>
+        <tr>
+</table>
+
+<table width="800" rules="cols" borderstyle="dashed" style="border:2px solid skyblue">
+        <tr>
+          <td width=370>Original<img alt="" src="https://images.velog.io/images/sjinu/post/d5808933-409c-46cf-a683-e8b4b6ce8ca9/original.gif" /></td><td >AANet<img alt="" src="https://images.velog.io/images/sjinu/post/8c6d11e3-334f-4ea5-beb0-851d6e91e647/Mike!.gif" /></td>
+       <tr>
+</table>
+
+## New Files
+[aa_inference.py](https://github.com/sjinu96/erAIser/blob/main/AANet/aa_inference.py) : 전체적인 inference 과정을 포함하는 class AAInference  
+[preprocessing_aanet.py](https://github.com/sjinu96/erAIser/blob/main/AANet/preprocessing_aanet.py) : inference에 필요한 함수들  
+[preprocessing_davis.py](https://github.com/sjinu96/erAIser/blob/main/AANet/preprocessing_davis.py) : dataset의 정제를 위해 필요한 함수들.  
+[]()  
+[]() 
+
+## P.S.
+> dataset에 대한 설명과 모듈의 기능 및 구조 등은 추후 새로운 저장소에 정리할 예정입니다.
+
 
 ## Contents
 1. [erAIser](#erAIser)
@@ -155,28 +188,49 @@ python3 inference.py --resume SiamMask_DAVIS.pth --config config_inference.json 
 ```
 The result video will be saved in `results`.
 
-## References
-- Wang, Qiang, et al. "Fast online object tracking and segmentation: A unifying approach." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2019.
-- Wang, Tianyu, et al. "Instance shadow detection." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020.
-- Dahun Kim, Sanghyun Woo, Joon-Young Lee, and In So Kweon. Deep video inpainting. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pages 5792–5801, 2019.
-- Siarohin, Aliaksandr and Woodford, et al. "Motion Representations for Articulated Animation." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021.
-
-## Contributors
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/han811"><img src="https://user-images.githubusercontent.com/68596881/126450991-076c4c5c-a960-4372-a08c-0460fa9cbf11.png" width="150" height="150"><br /><sub><b>김태한 <br> Inpainting</b></sub></td>
-    <td align="center"><a href="https://github.com/YoojLee"><img src="https://user-images.githubusercontent.com/68596881/126451113-e60a8c58-3fa0-4d7f-a42b-df3c3123a0d5.png" width="150" height="150"><br /><sub><b>이유진 <br> Inpainting, Web</b></sub></td>
-    <td align="center"><a href="https://github.com/shkim960520"><img src="https://user-images.githubusercontent.com/68596881/126451157-a8aba5b6-71b4-400f-8b80-01b8a0d1345a.png" width="150" height="150"><br /><sub><b>김상현 <br> Video Object Segmentation, Web</b></sub></td>
-    <td align="center"><a href="https://github.com/mink7878"><img src="https://user-images.githubusercontent.com/68596881/126451217-b2ef99bc-edfd-479c-bf06-81a745ea37e7.png" width="150" height="150"><br /><sub><b>김민경 <br> Video Object Segmentation</b></sub></td>
-  </tr>
 </table>
 
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/araseo"><img src="https://user-images.githubusercontent.com/68596881/126451283-7b86921c-219e-4f08-99bd-56a31cef96d9.png" width="150" height="150"><br /><sub><b>서아라 <br> Inpainting</b></sub></td>
-    <td align="center"><a href="https://github.com/joy5075"><img src="https://user-images.githubusercontent.com/68596881/126451367-a16223af-f729-47e0-bdd7-f4b2bc67b743.png" width="150" height="150"><br /><sub><b>장혜림 <br> Video Object Segmentation</b></sub></td>
-    <td align="center"><a href="https://github.com/5hyeonkwon"><img src="https://user-images.githubusercontent.com/68596881/126451450-e7f2f302-73ab-47fe-be6e-77fe29ad7a1e.png" width="150" height="150"><br /><sub><b>권오현 <br> Video Object Segmentation, Web</b></sub></td>
-    <td align="center"><a href="https://github.com/sjinu96"><img src="https://user-images.githubusercontent.com/68596881/126451520-b89d3ce5-0286-443a-846c-547b70e0bd28.png" width="150" height="150"><br /><sub><b>박진수 <br> Inpainting, AAnet</b></sub></td>
-    <td align="center"><a href="https://github.com/Jy0923"><img src="https://user-images.githubusercontent.com/68596881/126451575-73e3f251-05cc-44bc-a34f-9da0dbb41b2d.png" width="150" height="150"><br /><sub><b>오주영 <br> Inpainting, Web</b></sub></td>
-  </tr>
-</table>
+
+### Training for base model in AANet
+
+To train a model run:
+```bash
+CUDA_VISIBLE_DEVICES=0 python run.py --config config/dataset_name.yaml --device_ids 0
+```
+The code will create a folder in the log directory (each run will create a time-stamped new folder). Checkpoints will be saved to this folder.
+To check the loss values during training see ```log.txt```.
+You can also check training data reconstructions in the ```train-vis``` subfolder.
+Then to train **Animation via disentaglement (AVD)** use:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python run.py --checkpoint log/{folder}/cpk.pth --config config/dataset_name.yaml --device_ids 0 --mode train_avd
+```
+Where ```{folder}``` is the name of the folder created in the previous step. (Note: use backslash '\' before space.)
+This will use the same folder where checkpoint was previously stored.
+It will create a new checkpoint containing all the previous models and the trained avd_network.
+You can monitor performance in log file and visualizations in train-vis folder.
+
+
+#### Training on your own dataset
+1) Resize all the videos to the same size, e.g 256x256, the videos can be in '.gif', '.mp4' or folder with images.
+We recommend the latter, for each video make a separate folder with all the frames in '.png' format. This format is loss-less, and it has better i/o performance.
+
+2) Create a folder ```data/dataset_name``` with 2 subfolders ```train``` and ```test```, put training videos in the ```train``` and testing in the ```test```.
+
+3) Create a config file ```config/dataset_name.yaml```. See description of the parameters in the ```config/vox256.yaml```.  Specify the dataset root in dataset_params specify by setting  ```root_dir:  data/dataset_name```.  Adjust other parameters as desired, such as the number of epochs for example. Specify ```id_sampling: False``` if you do not want to use id_sampling.
+
+
+#### Additional notes
+
+Citation: 
+```
+@inproceedings{siarohin2021motion,
+        author={Siarohin, Aliaksandr and Woodford, Oliver and Ren, Jian and Chai, Menglei and Tulyakov, Sergey},
+        title={Motion Representations for Articulated Animation},
+        booktitle = {CVPR},
+        year = {2021}
+}
+```
+
+
+
