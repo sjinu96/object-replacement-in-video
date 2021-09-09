@@ -1,0 +1,37 @@
+{
+    "network": {
+        "arch": "Custom"
+    },
+    "hp": {
+        "instance_size": 255,
+        "base_size": 8,
+        "out_size": 127,
+        "seg_thr": 0.35,
+        "penalty_k": 0.04,
+        "window_influence": 0.4,
+        "lr": 1.0
+    },
+    "anchors": {
+        "stride": 8,
+        "ratios": [0.33, 0.5, 1, 2, 3],
+        "scales": [8],
+        "round_dight": 0
+    },
+    "opt": {
+        "crop_size" : 512,
+        "double_size" : true,
+        "search_range" : 4,
+        "result_path" : "vi/results/vinet_agg_rec",
+        "pretrain_path" : "vi/results/vinet_agg_rec/save_agg_rec_512.pth",
+        "model" : "vinet_final",
+        "batch_norm" : false,
+        "no_train" : true,
+        "test" : true,
+        "no_cuda" : false,
+        "t_stride" : 3,
+        "loss_on_raw" : false,
+        "prev_warp" : true,
+        "save_image" : true,
+        "save_video" : true
+    }
+}
