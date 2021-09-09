@@ -1,0 +1,5 @@
+imageio==2.3.0
+PyYAML==5.1
+scikit-image==0.14.2
+scikit-learn==0.19.2
+imageio-ffmpeg
