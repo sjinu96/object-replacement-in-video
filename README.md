@@ -38,8 +38,22 @@
 []()  
 []() 
 
-## P.S.
-> dataset에 대한 설명과 모듈의 기능 및 구조 등은 추후 새로운 저장소에 정리할 예정입니다.
+## dataset used for training
+
+1. DAVIS
+
+![image](https://user-images.githubusercontent.com/71121461/132947447-6ac43748-b25e-4e47-b7da-6e58daa26d2f.png)
+
+2. Taichi
+![image](https://user-images.githubusercontent.com/71121461/132947438-186c90ec-10e1-4e9b-b430-1dbc9269ee12.png)
+
+3. TikTok
+![image](https://user-images.githubusercontent.com/71121461/132947458-5dde916f-e940-4158-a838-503678281049.png)
+
+4. Cough
+
+![image](https://user-images.githubusercontent.com/71121461/132947476-f0f05524-3d99-4d3d-9256-3094a25a7d62.png)
+
 
 
 ## Contents
@@ -195,8 +209,12 @@ The result video will be saved in `results`.
 
 </table>
 
+---
 
-### Training for base model in AANet
+**Following part is *copy and paste* from [original repository by snap-research](https://github.com/snap-research/articulated-animation)**
+
+
+## Training for base model in AANet
 
 To train a model run:
 ```bash
@@ -216,7 +234,7 @@ It will create a new checkpoint containing all the previous models and the train
 You can monitor performance in log file and visualizations in train-vis folder.
 
 
-#### Training on your own dataset
+### Training on your own dataset
 1) Resize all the videos to the same size, e.g 256x256, the videos can be in '.gif', '.mp4' or folder with images.
 We recommend the latter, for each video make a separate folder with all the frames in '.png' format. This format is loss-less, and it has better i/o performance.
 
