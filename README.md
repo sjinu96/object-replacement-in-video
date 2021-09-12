@@ -1,13 +1,11 @@
 
-## Editing...(0909~)
-
 ### Final project : [erAIser](https://github.com/shkim960520/erAIser) - Remove an object in video using AI
 
 [![file](https://img.shields.io/badge/presentation-file-orange)](https://drive.google.com/file/d/176qC2l3OYg_Uodj144VQRZ2MIT7Kobhu/view?usp=sharing)
 [![video](https://img.shields.io/badge/presentation-video-orange)](https://www.youtube.com/watch?v=ebZxKIbMvqo)
 
 
-# Moving Object Replacement in Video
+# Moving Object Replacement in Video(called 'AANet' in full project)
 
 본 저장소는 [github.com/snapresearch](https://github.com/snap-research/articulated-animation)을 기반으로 합니다.
 해당 모델을 새로운 task(물체가 지워진 동영상 내에 새로운 애니메이션을 생성하는)을 적용하기 위해 추가한 모듈과 함수는 아래와 같습니다. 
@@ -31,32 +29,32 @@
        <tr>
 </table>
 
-## New Files
+## Code Files for Object Replacement
 [aa_inference.py](https://github.com/sjinu96/erAIser/blob/main/AANet/aa_inference.py) : 전체적인 inference 과정을 포함하는 class AAInference  
 [preprocessing_aanet.py](https://github.com/sjinu96/erAIser/blob/main/AANet/preprocessing_aanet.py) : inference에 필요한 함수들  
 [preprocessing_davis.py](https://github.com/sjinu96/erAIser/blob/main/AANet/preprocessing_davis.py) : dataset의 정제를 위해 필요한 함수들.  
 []()  
 []() 
 
-## dataset used for training
+## Dataset Used for Training
 
-1. DAVIS
 
-![image](https://user-images.githubusercontent.com/71121461/132947447-6ac43748-b25e-4e47-b7da-6e58daa26d2f.png)
+![image](https://user-images.githubusercontent.com/71121461/132973929-6ccd1112-d7c0-4967-9b39-251ea637320b.png)
 
-2. Taichi
-![image](https://user-images.githubusercontent.com/71121461/132947438-186c90ec-10e1-4e9b-b430-1dbc9269ee12.png)
 
-3. TikTok
-![image](https://user-images.githubusercontent.com/71121461/132947458-5dde916f-e940-4158-a838-503678281049.png)
+1. [DAVIS](https://davischallenge.org/davis2017/code.html)
 
-4. Cough
+2. [Taichi](https://paperswithcode.com/dataset/tai-chi-hd)
 
-![image](https://user-images.githubusercontent.com/71121461/132947476-f0f05524-3d99-4d3d-9256-3094a25a7d62.png)
+3. [TikTok](https://paperswithcode.com/dataset/tiktok-dataset)
+
+4. [Cough](https://web.bii.a-star.edu.sg/~chengli/FluRecognition.htm)
 
 
 
-## Contents
+
+# [Full Project(erAIser)](https://github.com/shkim960520/erAIser) and Implementation code
+
 1. [erAIser](#erAIser)
 2. [Example](#Example)
 3. [Demo screenshot](Demo-screenshot)
@@ -82,7 +80,7 @@ Let’s make your own video of a specific object being erased with ‘erAIser’
 
 <br>
 
-## Example
+## Example of erAIser(not using object replacement)
 <br>
 
 <table>
@@ -201,7 +199,7 @@ mkdir results
 python3 inference.py --resume checkpoint_e19.pth --config config_inference.json
 ```
 
-6-2. Run `inference.py` for change object to other (ex. person, animation character)
+**6-2. Run `inference.py` for change object to other (ex. person, animation character)**
 ```bash
 python3 inference.py --resume SiamMask_DAVIS.pth --config config_inference.json --using_aanet True
 ```
@@ -213,6 +211,7 @@ The result video will be saved in `results`.
 
 **Following part is *copy and paste* from [original repository by snap-research](https://github.com/snap-research/articulated-animation)**
 
+# Base Research for Object Replacement in video 
 
 ## Training for base model in AANet
 
@@ -241,19 +240,4 @@ We recommend the latter, for each video make a separate folder with all the fram
 2) Create a folder ```data/dataset_name``` with 2 subfolders ```train``` and ```test```, put training videos in the ```train``` and testing in the ```test```.
 
 3) Create a config file ```config/dataset_name.yaml```. See description of the parameters in the ```config/vox256.yaml```.  Specify the dataset root in dataset_params specify by setting  ```root_dir:  data/dataset_name```.  Adjust other parameters as desired, such as the number of epochs for example. Specify ```id_sampling: False``` if you do not want to use id_sampling.
-
-
-#### Additional notes
-
-Citation: 
-```
-@inproceedings{siarohin2021motion,
-        author={Siarohin, Aliaksandr and Woodford, Oliver and Ren, Jian and Chai, Menglei and Tulyakov, Sergey},
-        title={Motion Representations for Articulated Animation},
-        booktitle = {CVPR},
-        year = {2021}
-}
-```
-
-
 
