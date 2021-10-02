@@ -13,7 +13,17 @@
 []()  
 []() 
 
-## Exmaple
+
+
+## Code Files for Object Replacement
+[aa_inference.py](https://github.com/sjinu96/erAIser/blob/main/AANet/aa_inference.py) : 전체적인 inference 과정을 포함하는 class AAInference  
+[preprocessing_aanet.py](https://github.com/sjinu96/erAIser/blob/main/AANet/preprocessing_aanet.py) : inference에 필요한 함수들  
+[preprocessing_davis.py](https://github.com/sjinu96/erAIser/blob/main/AANet/preprocessing_davis.py) : dataset의 정제를 위해 필요한 함수들.  
+[]()  
+[]() 
+
+
+## Example
 
 
 
@@ -29,12 +39,6 @@
        <tr>
 </table>
 
-## Code Files for Object Replacement
-[aa_inference.py](https://github.com/sjinu96/erAIser/blob/main/AANet/aa_inference.py) : 전체적인 inference 과정을 포함하는 class AAInference  
-[preprocessing_aanet.py](https://github.com/sjinu96/erAIser/blob/main/AANet/preprocessing_aanet.py) : inference에 필요한 함수들  
-[preprocessing_davis.py](https://github.com/sjinu96/erAIser/blob/main/AANet/preprocessing_davis.py) : dataset의 정제를 위해 필요한 함수들.  
-[]()  
-[]() 
 
 ## Dataset Used for Training
 
