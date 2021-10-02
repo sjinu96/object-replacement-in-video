@@ -7,12 +7,11 @@
 
 # Moving Object Replacement in Video(called 'AANet' in full project)
 
-본 저장소는 [github.com/snapresearch](https://github.com/snap-research/articulated-animation)을 기반으로 합니다.
+본 프로젝트는 [github.com/snapresearch](https://github.com/snap-research/articulated-animation)의 모델을 기반으로 합니다.
 해당 모델을 새로운 task(물체가 지워진 동영상 내에 새로운 애니메이션을 생성하는)을 적용하기 위해 추가한 모듈과 함수는 아래와 같습니다. 
 
 []()  
 []() 
-
 
 
 ## Code Files for Object Replacement
