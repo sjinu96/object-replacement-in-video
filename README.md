@@ -54,6 +54,49 @@
 
 
 
+---
+
+# Base Research for Object Replacement in video 
+
+**Following part is *copy and paste* from [original repository by snap-research](https://github.com/snap-research/articulated-animation)**
+
+> 해당 파트에서는 Object Replacement(AANET)을 구현하기 위해 사용된 Base model을 학습하는 코드를 위의 깃헙에서 복사, 붙혀넣기 하였습니다. 
+
+## Training for base model in AANet
+
+To train a model run:
+```bash
+CUDA_VISIBLE_DEVICES=0 python run.py --config config/dataset_name.yaml --device_ids 0
+```
+The code will create a folder in the log directory (each run will create a time-stamped new folder). Checkpoints will be saved to this folder.
+To check the loss values during training see ```log.txt```.
+You can also check training data reconstructions in the ```train-vis``` subfolder.
+Then to train **Animation via disentaglement (AVD)** use:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python run.py --checkpoint log/{folder}/cpk.pth --config config/dataset_name.yaml --device_ids 0 --mode train_avd
+```
+Where ```{folder}``` is the name of the folder created in the previous step. (Note: use backslash '\' before space.)
+This will use the same folder where checkpoint was previously stored.
+It will create a new checkpoint containing all the previous models and the trained avd_network.
+You can monitor performance in log file and visualizations in train-vis folder.
+
+
+### Training on your own dataset
+1) Resize all the videos to the same size, e.g 256x256, the videos can be in '.gif', '.mp4' or folder with images.
+We recommend the latter, for each video make a separate folder with all the frames in '.png' format. This format is loss-less, and it has better i/o performance.
+
+2) Create a folder ```data/dataset_name``` with 2 subfolders ```train``` and ```test```, put training videos in the ```train``` and testing in the ```test```.
+
+3) Create a config file ```config/dataset_name.yaml```. See description of the parameters in the ```config/vox256.yaml```.  Specify the dataset root in dataset_params specify by setting  ```root_dir:  data/dataset_name```.  Adjust other parameters as desired, such as the number of epochs for example. Specify ```id_sampling: False``` if you do not want to use id_sampling.
+
+
+
+## P.S
+> Object Replacement에 해당하는 파트에 대한 설명은 위와 같고, Object Replacement와 Object Remove에 대한 Implemetation 방법은 아래에 덧붙힌 [Full Project(erAIser)](https://github.com/shkim960520/erAIser)의 Readme를 참고하세요. 
+
+---
+
 # [Full Project(erAIser)](https://github.com/shkim960520/erAIser) and Implementation code
 
 1. [erAIser](#erAIser)
@@ -209,36 +252,3 @@ The result video will be saved in `results`.
 </table>
 
 ---
-
-**Following part is *copy and paste* from [original repository by snap-research](https://github.com/snap-research/articulated-animation)**
-
-# Base Research for Object Replacement in video 
-
-## Training for base model in AANet
-
-To train a model run:
-```bash
-CUDA_VISIBLE_DEVICES=0 python run.py --config config/dataset_name.yaml --device_ids 0
-```
-The code will create a folder in the log directory (each run will create a time-stamped new folder). Checkpoints will be saved to this folder.
-To check the loss values during training see ```log.txt```.
-You can also check training data reconstructions in the ```train-vis``` subfolder.
-Then to train **Animation via disentaglement (AVD)** use:
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python run.py --checkpoint log/{folder}/cpk.pth --config config/dataset_name.yaml --device_ids 0 --mode train_avd
-```
-Where ```{folder}``` is the name of the folder created in the previous step. (Note: use backslash '\' before space.)
-This will use the same folder where checkpoint was previously stored.
-It will create a new checkpoint containing all the previous models and the trained avd_network.
-You can monitor performance in log file and visualizations in train-vis folder.
-
-
-### Training on your own dataset
-1) Resize all the videos to the same size, e.g 256x256, the videos can be in '.gif', '.mp4' or folder with images.
-We recommend the latter, for each video make a separate folder with all the frames in '.png' format. This format is loss-less, and it has better i/o performance.
-
-2) Create a folder ```data/dataset_name``` with 2 subfolders ```train``` and ```test```, put training videos in the ```train``` and testing in the ```test```.
-
-3) Create a config file ```config/dataset_name.yaml```. See description of the parameters in the ```config/vox256.yaml```.  Specify the dataset root in dataset_params specify by setting  ```root_dir:  data/dataset_name```.  Adjust other parameters as desired, such as the number of epochs for example. Specify ```id_sampling: False``` if you do not want to use id_sampling.
-
