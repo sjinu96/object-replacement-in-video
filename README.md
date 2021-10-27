@@ -7,10 +7,9 @@
 
 # Moving Object Replacement in Video(called 'AANet' in full project)
 
-본 프로젝트는 [github.com/snapresearch](https://github.com/snap-research/articulated-animation)의 생성모델 연구([Motion Representation for Articulated Animation](https://arxiv.org/abs/2104.11280))를 기반으로 합니다.
-해당 베이스 모델을 새로운 task(동영상 내 지워진 물체를 대신하는 새로운 애니메이션 생성)를 적용하기 위해 추가한 모듈과 함수는 아래와 같습니다. 
+본 모델은 [github.com/snapresearch](https://github.com/snap-research/articulated-animation)의 생성모델 연구([Motion Representation for Articulated Animation](https://arxiv.org/abs/2104.11280))의 아키텍처를 활용합니다.
+해당 아키텍처를 기반으로 새로운 task(동영상 내 지워진 물체를 대신하는 새로운 애니메이션 생성)를 실현하기위해 추가한 모듈과 함수는 아래와 같습니다. 
 
-[]()  
 
 ## Code Files for Object Replacement
 [aa_inference.py](https://github.com/sjinu96/erAIser/blob/main/AANet/aa_inference.py) : 전체적인 inference 과정을 포함하는 class AAInference  
