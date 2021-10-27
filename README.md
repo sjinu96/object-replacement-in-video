@@ -60,7 +60,7 @@
 
 **Following part is *copy and paste* from [original repository by snap-research](https://github.com/snap-research/articulated-animation)**
 
-> 해당 파트에서는 Object Replacement(AANET)을 구현하기 위해 사용된 Base model을 학습하는 코드를 위의 깃헙에서 복사, 붙혀넣기 하였습니다. 
+> Object Replacement(AANET)을 구현하기 위해 사용된 Base model을 학습하는 코드를 위의 github에서 copy & paste 한 code입니다. 
 
 ## Training for base model in AANet
 
