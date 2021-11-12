@@ -51,7 +51,9 @@
 4. [Cough](https://web.bii.a-star.edu.sg/~chengli/FluRecognition.htm)
 
 
+## Architecture
 
+![AANet](https://user-images.githubusercontent.com/71121461/141457613-5d4fc311-3f08-4fb0-9bd4-d5719b91cd9d.png)
 
 ---
 
